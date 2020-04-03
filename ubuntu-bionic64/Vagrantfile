@@ -1,6 +1,3 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 Vagrant.configure(2) do |config|
 
   # Install vagrant-disksize to allow resizing the vagrant box disk.
@@ -18,7 +15,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 443, host: 8443
 
   config.vm.provider "virtualbox" do |vb|
-	  vb.name = "ubuntu-xenial"    
+    vb.name = "ubuntu-xenial"    
     vb.memory = 4096
     vb.cpus = 2
   end

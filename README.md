@@ -1,5 +1,5 @@
 # Vagrant
-Creates an Ubuntu 18.04 VM as to use as a local Docker and Kubernetes development environment.
+Creates an Ubuntu 18.04 VM to use as a Docker and Kubernetes development environment.
 
 Get started by installing [Vagrant](https://www.vagrantup.com/), [VirtualBox](https://www.virtualbox.org/) and then running the following from the  `ubuntu-bionic64` folder:
 ```bash

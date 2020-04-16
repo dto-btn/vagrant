@@ -15,7 +15,12 @@ echo "----- kubectl ------"
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
-echo 'source <(kubectl completion bash)' >> /home/vagrant/.bashrc
+cat << FOE >> /home/vagrant/.bashrc
+# kubectl autocomplete and alias
+source <(kubectl completion bash)
+alias k=kubectl
+complete -F __start_kubectl k
+FOE
 
 echo "----- k3d ------"
 wget -q -O - https://raw.githubusercontent.com/rancher/k3d/master/install.sh | bash

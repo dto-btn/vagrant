@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 443, host: 8443
 
   # Mount given path in /home/vagrant/dev
-  # config.vm.synced_folder "C:\\Path\\To\\Some\\Folder", "/home/vagrant/dev"
+  # config.vm.synced_folder "C:\\Path\\To\\Dev", "/home/vagrant/dev", type: 'smb', owner: 'vagrant', group: 'vagrant', mount_options: ["mfsymlinks,dir_mode=0775,file_mode=0775"]
 
   # Default to Hyper-V (need to run `vagrant up` from shell with admin privileges)
   config.vm.provider "hyperv" do |h|

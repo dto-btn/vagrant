@@ -7,8 +7,9 @@ apt -y upgrade
 apt -y install --install-recommends linux-generic
 apt -y autoremove
 
-echo "----- npm ------"
+echo "----- npm and Vue.js CLI ------"
 apt -y install npm
+npm install -g @vue/cli
 
 echo "----- Docker ------"
 wget -qO- https://get.docker.com/ | sh

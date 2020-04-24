@@ -7,6 +7,9 @@ apt -y upgrade
 apt -y install --install-recommends linux-generic
 apt -y autoremove
 
+echo "----- npm ------"
+apt -y install npm
+
 echo "----- Docker ------"
 wget -qO- https://get.docker.com/ | sh
 usermod -aG docker vagrant
